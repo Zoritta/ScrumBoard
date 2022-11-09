@@ -10,6 +10,10 @@ window.geometry("900x650")
 title = window.title("Slide! Slip! Nothing more!")
 
 
+def move_task():
+    pass
+
+
 def add_task():
     assigned_task_frame = Frame(
         main_frame1, background="black", padx="3", pady="2")
@@ -17,23 +21,23 @@ def add_task():
     assigned_task_frame.config(height="50")
     added_todo_task_text = Label(
         assigned_task_frame, text=task_entry1_text.get(), bg="light green", padx="3", pady="1")
-    added_todo_task_text.grid(row=0, column=0)
+    added_todo_task_text.pack(side="left")
 
-    # # Read the Image
-    image = Image.open("download.png")
+    # # # Read the Image
+    # image = Image.open("download.png")
 
-    # # Resize the image using resize() method
-    resized_image = image.resize((20, 20))
+    # # # Resize the image using resize() method
+    # resized_image = image.resize((20, 20))
 
-    edit_button_photo = ImageTk.PhotoImage(resized_image)
+    # edit_button_photo = ImageTk.PhotoImage(resized_image)
 
     edit_button = Button(assigned_task_frame,
-                         text="edit").grid(row=0, column=1)
+                         text="edit").pack(side="right")
 
     move_button = Button(assigned_task_frame,
-                         text="move").grid(row=0, column=2)
+                         text="move").pack(side="right")
     delete_button = Button(assigned_task_frame,
-                           text="delete").grid(row=0, column=3)
+                           text="delete").pack(side="right")
 
 
 top_frame = Frame(window, background="blue")
