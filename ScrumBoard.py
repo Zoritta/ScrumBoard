@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from customtkinter import *
+import network
 
 
 window = Tk()
